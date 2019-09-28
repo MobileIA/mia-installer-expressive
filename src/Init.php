@@ -1,4 +1,6 @@
-<?php namespace Mobileia\Expressive\Installer;
+<?php
+
+namespace Mobileia\Expressive\Installer;
 
 class Init 
 {

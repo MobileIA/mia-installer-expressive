@@ -23,3 +23,4 @@ data/DoctrineORMModule/cache/
 demos/
 extras/documentation
 composer.lock
+/nbproject/private/

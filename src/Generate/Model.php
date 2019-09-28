@@ -1,4 +1,6 @@
-<?php namespace Mobileia\Expressive\Installer\Generate;
+<?php
+
+namespace Mobileia\Expressive\Installer\Generate;
 
 class Model extends BaseFile
 {
