@@ -39,4 +39,9 @@ class AbmHandler extends BaseFile
         $model->name = $this->name;
         $model->run();
     }
+
+    protected function openFile()
+    {
+        
+    }
 }
