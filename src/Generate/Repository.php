@@ -2,18 +2,18 @@
 
 namespace Mobileia\Expressive\Installer\Generate;
 
-class Model extends BaseFile
+class Repository extends BaseFile
 {
     /**
      * Path del archivo a tener de base
      * @var string
      */
-    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/g_model.txt';
+    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/g_repository.txt';
     /**
      * Path de la carpeta donde se va a guardar
      * @var string
      */
-    protected $savePath = './src/App/src/Model/';
+    protected $savePath = './src/App/src/Repository/';
     /**
      * Nombre de la DB
      *
@@ -27,6 +27,6 @@ class Model extends BaseFile
         $this->file = str_replace('%%name%%', $this->name, $this->file);
         
         mkdir($this->savePath);
-        file_put_contents($this->savePath . $this->getCamelCase($this->name) . '.php', $this->file);
+        file_put_contents($this->savePath . $this->getCamelCase($this->name) . 'Repository.php', $this->file);
     }
 }
