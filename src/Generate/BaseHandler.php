@@ -13,7 +13,7 @@ abstract class BaseHandler extends BaseFile
 
     public function addRoute($nameHandler, $withParams = '', $isAuth = false)
     {
-        $route = new \Mobileia\Expressive\Installer\Added\Router();
+        $route = new \Mobileia\Expressive\Installer\Added\Route();
         $route->name = $this->name;
         $route->nameHandler = $nameHandler;
         $route->paramsRequired = $withParams;

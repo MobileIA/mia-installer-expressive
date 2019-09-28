@@ -4,7 +4,7 @@ namespace Mobileia\Expressive\Installer\Added;
 
 use \Illuminate\Database\Capsule\Manager as DB;
 
-class Router extends BaseFile
+class Router extends \Mobileia\Expressive\Installer\Generate\BaseFile
 {
     /**
      * Path del archivo a tener de base
@@ -29,7 +29,7 @@ class Router extends BaseFile
 
     public function run()
     {
-        $addRoute = '    $app->route(\'/'.$this->name.'/list\', [';
+        $addRoute = '    $app->route(\'/'.$this->name.'/'. $this->nameHandler . '\', [';
 
         if($this->paramsRequired != ''){
             $addRoute .= 'new Mobileia\Expressive\Request\MiaVerifyParamHandler(array('.$this->paramsRequired.')), ';
