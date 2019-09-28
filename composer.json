@@ -1,7 +1,7 @@
 {
     "name": "mobileia/mia-installer-expressive",
     "description": "The library for Zend Expressive 3",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [{
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mobileia\\Expressive\\Installer": "src/"
+            "Mobileia\\Expressive\\Installer\\": "src/"
         }
     }
 }
