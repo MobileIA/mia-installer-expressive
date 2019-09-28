@@ -2,7 +2,7 @@
 
 namespace Mobileia\Expressive\Installer\Generate;
 
-class FetchHandler extends BaseFile
+class FetchHandler extends BaseHandler
 {
     /**
      * Path del archivo a tener de base
@@ -14,12 +14,6 @@ class FetchHandler extends BaseFile
      * @var string
      */
     protected $savePath = './src/App/src/Handler/';
-    /**
-     * Nombre de la DB
-     *
-     * @var string
-     */
-    public $name = '';
 
     public function run()
     {
@@ -30,5 +24,8 @@ class FetchHandler extends BaseFile
             mkdir($this->savePath . '/' . $this->getCamelCase($this->name), 0777, true);
         } catch (\Exception $exc) { }
         file_put_contents($this->savePath . '/' . $this->getCamelCase($this->name) . '/FetchHandler.php', $this->file);
+
+        // Agregamos route
+        $this->addRoute('fetch', "'id'", true);
     }
 }
