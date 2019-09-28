@@ -12,7 +12,7 @@ use \Illuminate\Database\Capsule\Manager as DB;
 class %%nameClass%%Repository 
 {
     /**
-     * Obtiene los %%%name%
+     * Obtiene los %%name%%
      * @param \Mobileia\Expressive\Database\Query\Configure $configure
      * @return array
      */

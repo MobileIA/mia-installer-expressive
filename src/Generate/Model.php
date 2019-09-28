@@ -26,7 +26,9 @@ class Model extends BaseFile
         $this->file = str_replace('%%nameClass%%', $this->getCamelCase($this->name), $this->file);
         $this->file = str_replace('%%name%%', $this->name, $this->file);
         
-        mkdir($this->savePath);
+        try {
+            mkdir($this->savePath, 0777, true);
+        } catch (\Exception $exc) { }
         file_put_contents($this->savePath . $this->getCamelCase($this->name) . '.php', $this->file);
     }
 }
