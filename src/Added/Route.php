@@ -4,7 +4,7 @@ namespace Mobileia\Expressive\Installer\Added;
 
 use \Illuminate\Database\Capsule\Manager as DB;
 
-class Router extends \Mobileia\Expressive\Installer\Generate\BaseFile
+class Route extends \Mobileia\Expressive\Installer\Generate\BaseFile
 {
     /**
      * Path del archivo a tener de base
