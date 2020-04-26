@@ -25,6 +25,6 @@ class FetchHandler extends \Mobileia\Expressive\Auth\Request\MiaAuthRequestHandl
             return \App\Factory\ErrorFactory::notExist();
         }
         // Devolvemos respuesta
-        return new \Mobileia\Expressive\Diactoros\MiaJsonResponse($$item->toArray());
+        return new \Mobileia\Expressive\Diactoros\MiaJsonResponse($item->toArray());
     }
 }

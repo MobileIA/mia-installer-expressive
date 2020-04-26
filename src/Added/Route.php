@@ -36,14 +36,14 @@ class Route extends \Mobileia\Expressive\Installer\Generate\BaseFile
         }
 
         if($this->isAuth){
-            $addRoute .= '\Mobileia\Expressive\Auth\Handler\AuthHandler::class, ';
+            $addRoute .= '\Mobileia\Expressive\Auth\Handler\AuthInternalHandler::class, ';
         }
 
         if($this->isRole > -1){
             $addRoute .= 'new Mobileia\Expressive\Auth\Middleware\MiaRoleAuthMiddleware([\Mobileia\Expressive\Auth\Model\MIAUser::ROLE_ADMIN]), ';
         }
 
-        $addRoute .= 'App\Handler\\'.$this->getCamelCase($this->name).'\\' . $this->getCamelCase($this->nameHandler) . 'Handler::class], [\'GET\', \'POST\'], \'' . $this->name .'.'. $this->nameHandler .'\');';
+        $addRoute .= 'App\Handler\\'.$this->getCamelCase($this->name).'\\' . $this->getCamelCase($this->nameHandler) . 'Handler::class], [\'GET\', \'POST\', \'OPTIONS\', \'HEAD\'], \'' . $this->name .'.'. $this->nameHandler .'\');';
 
         $addRoute .= '
 };';
