@@ -1,9 +1,7 @@
-import 'package:choofly/tabs/profile_user/profile_user.controller.dart';
-import 'package:choofly/utils/colors.util.dart';
-import 'package:choofly/widgets/button_list_icon.widget.dart';
-import 'package:choofly/widgets/photo_user.appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
+
+import '%%name%%.controller.dart';
 
 class %%nameClass%%Screen extends View {
 
