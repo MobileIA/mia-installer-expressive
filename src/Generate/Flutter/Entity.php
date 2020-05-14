@@ -1,12 +1,8 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Mobileia\Expressive\Installer\Generate\Flutter;
+
+use \Illuminate\Database\Capsule\Manager as DB;
 
 /**
  * Description of Entity
@@ -19,7 +15,7 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
      * Path del archivo a tener de base
      * @var string
      */
-    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/flutter/view.txt';
+    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/flutter/entity.txt';
     /**
      * Path de la carpeta donde se va a guardar
      * @var string
@@ -61,8 +57,8 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
         $this->file = str_replace('%%maps%%', $maps, $this->file);
         
         try {
-            mkdir($this->savePath . $this->name . '/', 0777, true);
+            mkdir($this->savePath . '/', 0777, true);
         } catch (\Exception $exc) { }
-        file_put_contents($this->savePath . $this->name  . '/' . $this->name . '.entity.dart', $this->file);
+        file_put_contents($this->savePath . $this->name . '.entity.dart', $this->file);
     }
 }

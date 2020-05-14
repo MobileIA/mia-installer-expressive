@@ -1,19 +1,18 @@
 import 'package:choofly/libraries/mobileia/mia_model.dart';
 
 class %%nameClass%% extends MIAModel {
-  %%properties%%
-
+%%properties%%
   @override
   MIAModel fromMap(Map<String, dynamic> data) {
     %%nameClass%% entity = new %%nameClass%%();
-    %%from%%
+%%from%%
     return entity;
   }
 
   @override
   Map<String, dynamic> toMap() {
     return {
-      %%maps%%
+%%maps%%
     };
   }
 }
