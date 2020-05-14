@@ -1,0 +1,24 @@
+import 'package:choofly/tabs/profile_user/profile_user.controller.dart';
+import 'package:choofly/utils/colors.util.dart';
+import 'package:choofly/widgets/button_list_icon.widget.dart';
+import 'package:choofly/widgets/photo_user.appbar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
+
+class %%nameClass%%Screen extends View {
+
+  @override
+  State<StatefulWidget> createState() => _%%nameClass%%State();
+
+}
+
+class __%%nameClass%%State extends ViewState<%%nameClass%%Screen, %%nameClass%%Controller> {
+
+  __%%nameClass%%State() : super(%%nameClass%%Controller());
+
+  @override
+  Widget buildPage() {
+    return Column();
+  }
+
+}
