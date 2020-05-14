@@ -45,4 +45,19 @@ abstract class BaseFile
     {
         return str_replace(' ', '', ucwords(str_replace(['_', '-'], [' ', ' '], $text)));
     }
+    /**
+     * Convierte el texto en camelcase
+     * 
+     * Ej: blog_tag => blogTag
+     * Ej: blog-tag => blogTag
+     *
+     * @param [type] $text
+     * @return void
+     */
+    protected function getCamelCaseVar($text)
+    {
+        return str_replace(' ', '', 
+                lcfirst(ucwords(str_replace(['_', '-'], [' ', ' '], $text)))
+        );
+    }
 }
