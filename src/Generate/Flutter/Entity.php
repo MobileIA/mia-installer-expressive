@@ -40,7 +40,7 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
         $from = '';
         $maps = '';
         foreach($columns as $column){
-            if(stripos($column->Type, 'int') !== false){
+            if(stripos($column->Type, 'int') === false){
                 $properties .= "  String ".$this->getCamelCaseVar($column->Field).";\n";
             }else{
                 $properties .= "  int ".$this->getCamelCaseVar($column->Field)." = 0;\n";
