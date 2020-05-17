@@ -46,7 +46,7 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
                 $properties .= "  int ".$this->getCamelCaseVar($column->Field)." = 0;\n";
             }
             
-            $from .= "    entity.".$this->getCamelCaseVar($column->Field)." = data['".$column->Field."'];\n";
+            $from .= "    this.".$this->getCamelCaseVar($column->Field)." = data['".$column->Field."'];\n";
             $maps .= "      '".$column->Field."': ".$this->getCamelCaseVar($column->Field).",\n";
         }
         $this->file = str_replace('%%properties%%', $properties, $this->file);

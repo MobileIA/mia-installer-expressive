@@ -4,9 +4,8 @@ class %%nameClass%% extends MIAModel {
 %%properties%%
   @override
   MIAModel fromMap(Map<String, dynamic> data) {
-    %%nameClass%% entity = new %%nameClass%%();
 %%from%%
-    return entity;
+    return this;
   }
 
   @override
