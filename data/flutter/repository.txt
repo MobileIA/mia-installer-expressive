@@ -27,4 +27,18 @@ class %%nameClass%%Repository {
 
     return object;
   }
+
+  Future<bool> save(%%nameClass%% entity) async {
+    final response = await APIClient().get%%nameClass%%Service().save(entity.toMap());
+    if(!response.isSuccessful){
+      return false;
+    }
+
+    final body = response.body;
+    if(body["success"] == true){
+      return true;
+    }
+
+    return false;
+  }
 }
