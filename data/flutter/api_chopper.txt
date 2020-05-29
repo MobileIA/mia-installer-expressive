@@ -14,7 +14,7 @@ class _$%%nameClass%%Api extends %%nameClass%%Api {
   }
 
   @override
-  final definitionType = CustomerApi;
+  final definitionType = %%nameClass%%Api;
 
   @override
   Future<Response<dynamic>> list(Map<String, dynamic> query) {
