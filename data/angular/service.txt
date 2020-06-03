@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { %%nameClass%% } from '../entities/coach';
+import { %%nameClass%% } from '../entities/%%name%%';
 import { MiaTableService, AuthenticationService } from '@mobileia/authentication';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';

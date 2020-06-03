@@ -9,10 +9,10 @@ abstract class %%nameClass%%Api extends ChopperService {
   static %%nameClass%%Api create([ChopperClient client]) => _$%%nameClass%%Api(client);
 
   @Post(path: '/%%name%%/list')
-  Future<Response> list(@QueryMap() Map<String, dynamic> query);
+  Future<Response> list(@Body() Map<String, dynamic> query);
 
   @Post(path: '/%%name%%/save')
-  Future<Response> save(@QueryMap() Map<String, dynamic> query);
+  Future<Response> save(@Body() Map<String, dynamic> query);
 
   @Post(path: '/%%name%%/remove')
   Future<Response> remove(@Query() int id);

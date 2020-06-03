@@ -19,16 +19,16 @@ class _$%%nameClass%%Api extends %%nameClass%%Api {
   @override
   Future<Response<dynamic>> list(Map<String, dynamic> query) {
     final $url = '/%%name%%/list';
-    final $params = query;
-    final $request = Request('POST', $url, client.baseUrl, parameters: $params);
+    final $body = query;
+    final $request = Request('POST', $url, client.baseUrl, body: $body);
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
   Future<Response<dynamic>> save(Map<String, dynamic> query) {
     final $url = '/%%name%%/save';
-    final $params = query;
-    final $request = Request('POST', $url, client.baseUrl, parameters: $params);
+    final $body = query;
+    final $request = Request('POST', $url, client.baseUrl, body: $body);
     return client.send<dynamic, dynamic>($request);
   }
 
