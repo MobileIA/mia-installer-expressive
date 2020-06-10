@@ -10,7 +10,7 @@ class %%nameClass%%Screen extends View {
 
 }
 
-class _%%nameClass%%State extends ViewState<%%nameClass%%Screen, %%nameClass%%Controller> {
+class _%%nameClass%%State extends MIAViewState<%%nameClass%%Screen, %%nameClass%%Controller> {
 
   _%%nameClass%%State() : super(%%nameClass%%Controller());
 
