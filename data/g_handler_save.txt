@@ -20,7 +20,13 @@ class SaveHandler extends \Mobileia\Expressive\Auth\Request\MiaAuthRequestHandle
         $item = $this->getForEdit($request);
         // Guardamos data
 %%properties%%
-        $item->save();
+        
+        try {
+            $item->save();
+        } catch (\Exception $exc) {
+            return new \Mobileia\Expressive\Diactoros\MiaJsonErrorResponse(-2, $exc->getMessage());
+        }
+
         // Devolvemos respuesta
         return new \Mobileia\Expressive\Diactoros\MiaJsonResponse(true);
     }
