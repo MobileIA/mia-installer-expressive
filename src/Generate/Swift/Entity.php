@@ -15,7 +15,7 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
      * Path del archivo a tener de base
      * @var string
      */
-    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/swift/entity.txt';
+    protected $filePath = './vendor/mobileia/mia-installer-expressive/data/swift/entity.swift';
     /**
      * Path de la carpeta donde se va a guardar
      * @var string
@@ -42,11 +42,11 @@ class Entity extends \Mobileia\Expressive\Installer\Generate\BaseFile
         foreach($columns as $column){
             if(stripos($column->Type, 'int') === false){
                 $properties .= "    @objc dynamic var $column->Field = \"\"\n";
-                $init .= "$column->Field = try container.decodeIfPresent(String.self, forKey: .$column->Field) ?? \"\"\n";
+                $init .= "        $column->Field = try container.decodeIfPresent(String.self, forKey: .$column->Field) ?? \"\"\n";
             }else{
                 $properties .= "    @objc dynamic var $column->Field = 0\n";
                 $init .= "        do{
-            id = try container.decode(Int.self, forKey: .$column->Field)
+            $column->Field = try container.decode(Int.self, forKey: .$column->Field)
         }catch{
             $column->Field = Int(try container.decode(String.self, forKey: .$column->Field))!;
         }\n";

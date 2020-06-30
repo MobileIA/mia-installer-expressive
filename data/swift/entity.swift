@@ -11,13 +11,6 @@ import UIKit
 class %%nameClass%%: NSObject, Decodable {
     
 %%properties%%
-
-
-    @objc dynamic var caption = "";
-    @objc dynamic var price = "";
-    @objc dynamic var photo = "";
-    @objc dynamic var start_date = "";
-    @objc dynamic var location_name = "";
     
     enum %%nameClass%%CodingKey : String, CodingKey {
 %%coding%%
