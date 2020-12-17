@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
+import 'package:ayudaapp/libraries/mobileia/views/mia_view_state.dart';
 
 import '%%name%%.controller.dart';
 
@@ -15,7 +16,7 @@ class _%%nameClass%%State extends MIAViewState<%%nameClass%%Screen, %%nameClass%
   _%%nameClass%%State() : super(%%nameClass%%Controller());
 
   @override
-  Widget buildPage() {
+  Widget get view {
     return Column();
   }
 
